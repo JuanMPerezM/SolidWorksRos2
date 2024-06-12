@@ -1,0 +1,32 @@
+import numpy as np
+from roboticstoolbox import DHRobot, RevoluteDH
+from spatialmath import SE3
+
+# Definimos los parámetros del robot
+L1 = 0.07
+L2 = 0.08
+L3 = 0.2
+
+# Definimos los enlaces utilizando los parámetros DH
+links = [
+    RevoluteDH(d=0, a=L1, alpha=np.pi/2),
+    RevoluteDH(d=0, a=0, alpha=np.pi, offset=np.pi),
+    RevoluteDH(d=0, a=L2, alpha=0),
+    RevoluteDH(d=0, a=L3, alpha=-np.pi/2),
+]
+
+# Creamos el objeto Robot
+robot = DHRobot(links, name="SimpleRobot")
+
+# Definimos la posición deseada
+pos_deseada = SE3(0.1, 0.2, 0.3)
+
+# Calculamos la cinemática inversa
+ik_sol = robot.ikine_LM(pos_deseada)
+
+# Imprimimos las soluciones
+if ik_sol.success:
+    print("Soluciones:")
+    print(ik_sol.q)
+else:
+    print("No se encontraron soluciones")
