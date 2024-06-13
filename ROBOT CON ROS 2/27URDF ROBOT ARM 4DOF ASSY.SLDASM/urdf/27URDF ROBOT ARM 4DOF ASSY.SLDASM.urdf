@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="27URDF ROBOT ARM 4DOF ASSY.SLDASM">
+  <link
+    name="BASE INICIAL">
+    <inertial>
+      <origin
+        xyz="-0.0798549789057355 -0.0269999999999893 0.0435864030122886"
+        rpy="0 0 0" />
+      <mass
+        value="0.00908679690130329" />
+      <inertia
+        ixx="2.73612316755863E-06"
+        ixy="-1.97113011013457E-22"
+        ixz="-9.07084976474116E-10"
+        iyy="5.39935024141699E-06"
+        iyz="8.23337854726788E-23"
+        izz="2.67685726921031E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/BASE INICIAL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/BASE INICIAL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LINK_1">
+    <inertial>
+      <origin
+        xyz="0.000387702097878515 -0.00019471799501896 0.0175224067893162"
+        rpy="0 0 0" />
+      <mass
+        value="0.0304519208079881" />
+      <inertia
+        ixx="6.58798506330231E-06"
+        ixy="-5.84616903765165E-07"
+        ixz="1.66832315919343E-07"
+        iyy="1.03445960653602E-05"
+        iyz="2.59537162201257E-08"
+        izz="1.11297722031527E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JOIN_1"
+    type="revolute">
+    <origin
+      xyz="-0.0798549789057355 -0.0254999999999893 0.0435864030122886"
+      rpy="-1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="BASE INICIAL" />
+    <child
+      link="LINK_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.142"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="LINK_2">
+    <inertial>
+      <origin
+        xyz="0.0113712939819302 0.0014999999999981 -0.00189543961320489"
+        rpy="0 0 0" />
+      <mass
+        value="0.00117913924114897" />
+      <inertia
+        ixx="1.67102769309711E-08"
+        ixy="4.73467188537286E-20"
+        ixz="4.61877845057227E-08"
+        iyy="3.01046935303028E-07"
+        iyz="-7.67954206492934E-21"
+        izz="2.8610536723378E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JOIN_2"
+    type="revolute">
+    <origin
+      xyz="0.0122048410537844 0.0202934190538423 0.041494746586289"
+      rpy="0 0 -2.9931451270789" />
+    <parent
+      link="LINK_1" />
+    <child
+      link="LINK_2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.57"
+      upper="-0.6"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="LINK_3">
+    <inertial>
+      <origin
+        xyz="0.042532554657113 -0.010640100019834 -0.0463316475111504"
+        rpy="0 0 0" />
+      <mass
+        value="0.0231946102096903" />
+      <inertia
+        ixx="5.08910036716424E-06"
+        ixy="8.41801632141775E-08"
+        ixz="4.92656567774265E-06"
+        iyy="1.46251315260081E-05"
+        iyz="-7.47900912677268E-08"
+        izz="9.92523027124402E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JOIN_3"
+    type="revolute">
+    <origin
+      xyz="0 0.0348452584956312 -0.00493582839009896"
+      rpy="-3.11846258809153 0.155318166800095 3.14159265358979" />
+    <parent
+      link="LINK_2" />
+    <child
+      link="LINK_3" />
+    <axis
+      xyz="0 -0.99973251196085 0.0231280031228403" />
+    <limit
+      lower="0.6"
+      upper="1.2"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="LINK_4">
+    <inertial>
+      <origin
+        xyz="-0.0875540509406057 0.0159099411527551 -0.00119062952313283"
+        rpy="0 0 0" />
+      <mass
+        value="0.00571136043685313" />
+      <inertia
+        ixx="2.90470935249414E-07"
+        ixy="1.68610303064428E-08"
+        ixz="1.85632704452051E-08"
+        iyy="8.27512779138802E-07"
+        iyz="4.4109101978856E-11"
+        izz="1.03363657352186E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JOIN_4"
+    type="revolute">
+    <origin
+      xyz="0.0534135251643596 -0.0294789461245163 -0.0592814196590796"
+      rpy="-3.11800504381541 -0.156423441595026 3.13794410920918" />
+    <parent
+      link="LINK_3" />
+    <child
+      link="LINK_4" />
+    <axis
+      xyz="0 -0.99999998527642 0.000171601744551923" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="LINK_5">
+    <inertial>
+      <origin
+        xyz="0.00280139349753589 -0.00160481543317919 0.00878237356084953"
+        rpy="0 0 0" />
+      <mass
+        value="0.00299760582356404" />
+      <inertia
+        ixx="1.23731232974342E-07"
+        ixy="5.25514701412817E-08"
+        ixz="-1.41074251452772E-14"
+        iyy="2.55847034252555E-07"
+        iyz="-1.26921063055235E-14"
+        izz="3.75081900133715E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JOIN_5"
+    type="revolute">
+    <origin
+      xyz="-0.11128 0.0065 -0.00024628"
+      rpy="-3.1415 0.00053801 2.9931" />
+    <parent
+      link="LINK_4" />
+    <child
+      link="LINK_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="1.5"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="LINK_6">
+    <inertial>
+      <origin
+        xyz="-0.00817531877179817 -7.98426266034498E-05 0.00557835556920025"
+        rpy="0 0 0" />
+      <mass
+        value="0.00152555597711324" />
+      <inertia
+        ixx="2.28014132243107E-08"
+        ixy="3.29486868291852E-09"
+        ixz="-6.9927962271591E-15"
+        iyy="1.93606680528622E-07"
+        iyz="4.88359080337196E-16"
+        izz="2.14119813112313E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://27URDF ROBOT ARM 4DOF ASSY.SLDASM/meshes/LINK_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JOIN_6"
+    type="revolute">
+    <origin
+      xyz="-0.11128 0.0245 -0.0017494"
+      rpy="3.1415 -0.00053801 -0.14845" />
+    <parent
+      link="LINK_4" />
+    <child
+      link="LINK_6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5"
+      upper="0.2"
+      effort="100"
+      velocity="3" />
+  </joint>
+</robot>
